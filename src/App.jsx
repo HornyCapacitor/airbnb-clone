@@ -9,12 +9,9 @@ function App() {
   const cards = Data.map(item => {
     return (
       <Card
-        img={item.coverImg}
-        rating={item.stats.rating}
-        reviewCount={item.stats.reviewCount}
-        location={item.location}
-        title={item.title}
-        price={item.price}
+        key={item.id}
+        item={item}
+        // {...item} I can use this instead of item={item} in order to receive the same result of items being imported as different values from Data.jsx. If so, I should clean my code whenever I put "props.item.xyz" to set it back to "props.xyz".
       />
     )
   })
@@ -23,9 +20,9 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <div className="card-container">
+      <section className="card-list">
         {cards}
-      </div>
+      </section>
     </div>
   )
 }

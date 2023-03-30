@@ -47,14 +47,17 @@ nav > img {
   margin-top: 0;
 }
 
-.card-container {
+.card-list {
   display: flex;
+  float: left;
+  overflow: auto;
 }
 
 .card {
   width: 175px;
   font-size: 12px;
   padding: 20px;
+  position: relative;
 }
 
 .card-image {
@@ -72,4 +75,14 @@ nav > img {
 .card-star {
   height: 10px;
   margin-right: 2px;
+}
+
+.card-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
